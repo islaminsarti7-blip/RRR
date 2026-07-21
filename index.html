@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZBG Girişimcilik | Güvenlik ve Aydınlatma Sistemleri</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        zbg: {
+                            dark: '#0a0a0a',
+                            panel: '#171717',
+                            gold: '#f59e0b',
+                            goldHover: '#d97706',
+                            text: '#d4d4d8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #d4d4d8;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+        }
+        .gold-glow {
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-zbg-gold selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-zbg-dark/90 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-heading font-extrabold text-3xl tracking-tighter text-white uppercase">
+                        ZBG <span class="text-zbg-gold">Girişimcilik</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hizmetler" class="text-sm font-semibold hover:text-zbg-gold transition-colors uppercase tracking-wide">Hizmetlerimiz</a>
+                    <a href="#hakkimizda" class="text-sm font-semibold hover:text-zbg-gold transition-colors uppercase tracking-wide">Hakkımızda</a>
+                    <a href="#neden-biz" class="text-sm font-semibold hover:text-zbg-gold transition-colors uppercase tracking-wide">Neden ZBG?</a>
+                    <a href="#iletisim" class="px-5 py-2.5 bg-zbg-gold text-black font-bold uppercase tracking-wider text-sm hover:bg-zbg-goldHover transition-all shadow-[0_0_15px_rgba(245,158,11,0.3)]">Bize Ulaşın</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-zbg-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zbg-panel border-b border-white/10 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col text-center">
+                <a href="#hizmetler" class="block px-3 py-3 font-semibold hover:bg-white/5 hover:text-zbg-gold transition-colors uppercase tracking-wide">Hizmetlerimiz</a>
+                <a href="#hakkimizda" class="block px-3 py-3 font-semibold hover:bg-white/5 hover:text-zbg-gold transition-colors uppercase tracking-wide">Hakkımızda</a>
+                <a href="#neden-biz" class="block px-3 py-3 font-semibold hover:bg-white/5 hover:text-zbg-gold transition-colors uppercase tracking-wide">Neden ZBG?</a>
+                <a href="#iletisim" class="block px-3 py-3 mt-4 bg-zbg-gold text-black font-bold uppercase tracking-wide mx-4">Bize Ulaşın</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
+            <div class="max-w-3xl">
+                <div class="inline-block px-3 py-1 mb-6 border border-zbg-gold/50 bg-zbg-gold/10 text-zbg-gold font-semibold text-sm tracking-widest uppercase">
+                    Kesin Hakimiyet. Tam Güvenlik.
+                </div>
+                <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white leading-tight mb-6 uppercase tracking-tight">
+                    Sınırları <br/>
+                    <span class="text-zbg-gold gold-glow">Biz Çizeriz.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-10 font-light leading-relaxed">
+                    Dört bir yan aydınlık, dört bir yan kayıtta. Kafan rahat, işin sağlama alındı. Çünkü işin başında <strong class="text-white font-bold">ZBG Girişimcilik</strong> var.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#hizmetler" class="px-8 py-4 bg-zbg-gold text-black font-heading font-bold uppercase tracking-widest hover:bg-zbg-goldHover transition-all hover:scale-105 duration-300 text-center">
+                        Sistemlerimizi İncele
+                    </a>
+                    <a href="#iletisim" class="px-8 py-4 bg-transparent border-2 border-white text-white font-heading font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all hover:scale-105 duration-300 text-center">
+                        Keşif Talebi Oluştur
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="hizmetler" class="py-24 bg-zbg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-zbg-gold tracking-widest uppercase mb-2">Faaliyet Alanlarımız</h2>
+                <h3 class="text-4xl font-heading font-extrabold text-white uppercase">Karanlığa Geçit Yok</h3>
+                <div class="w-24 h-1 bg-zbg-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-zbg-panel p-10 border-t-4 border-transparent hover:border-zbg-gold transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-black flex items-center justify-center text-zbg-gold text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-white mb-4 uppercase">Kamera Sistemleri</h4>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        7/24 kesintisiz kayıt, kusursuz gece görüşü ve uzaktan erişim imkanı. Eviniz, deponuz, iş yeriniz gözetimimiz altında. Kör nokta bırakmıyoruz.
+                    </p>
+                    <a href="#iletisim" class="text-zbg-gold font-bold uppercase tracking-wide hover:text-white transition-colors flex items-center gap-2">
+                        Bilgi Al <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-zbg-panel p-10 border-t-4 border-transparent hover:border-zbg-gold transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-black flex items-center justify-center text-zbg-gold text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-white mb-4 uppercase">Aydınlatma Sistemleri</h4>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Şalteri kaldırdık mı gece gündüze döner. Yüksek tasarruflu LED sistemler, çevre aydınlatması ve mimari aydınlatma ile güvendesiniz.
+                    </p>
+                    <a href="#iletisim" class="text-zbg-gold font-bold uppercase tracking-wide hover:text-white transition-colors flex items-center gap-2">
+                        Bilgi Al <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-zbg-panel p-10 border-t-4 border-transparent hover:border-zbg-gold transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-black flex items-center justify-center text-zbg-gold text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-white mb-4 uppercase">Elektrik Altyapı</h4>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Sağlam atılan temeller. Pano kurulumu, kablolama ve arıza tespiti. Bizim bağladığımız kablo kopmaz, kurduğumuz sistem yarı yolda bırakmaz.
+                    </p>
+                    <a href="#iletisim" class="text-zbg-gold font-bold uppercase tracking-wide hover:text-white transition-colors flex items-center gap-2">
+                        Bilgi Al <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimizda" class="py-24 bg-zbg-panel relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1541884488358-005126839d33?q=80&w=1000&auto=format&fit=crop" alt="Güvenlik Kamera Montaj" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 border border-white/10 shadow-[20px_20px_0px_0px_#f59e0b]">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-sm font-bold text-zbg-gold tracking-widest uppercase mb-2">Hakkımızda</h2>
+                    <h3 class="text-4xl font-heading font-extrabold text-white uppercase mb-6 leading-tight">
+                        Piyasanın <br/><span class="text-zbg-gold">Tek Sahibi.</span>
+                    </h3>
+                    <div class="space-y-4 text-gray-400 text-lg leading-relaxed">
+                        <p>
+                            Babamızdan aldığımız feyiz, atölyedeki alın terimizle yola çıktık. Bizde yamuk iş olmaz, her devre saat gibi çalışır. Müşteri değil, baş tacı biliriz; güveninizi asla boşa çıkarmayız.
+                        </p>
+                        <p>
+                            ZBG Girişimcilik olarak Ankara ve çevresinde, kamera ve aydınlatma sistemleri denildiğinde akla gelen o sarsılmaz gücüz. Emanetiniz canımızdır. Çarklar sessiz döner, gölgeyi bile takibe alırız. Bizim olduğumuz yerde, kusura yer kalmaz.
+                        </p>
+                    </div>
+                    <div class="mt-10 grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-zbg-gold pl-4">
+                            <p class="text-3xl font-heading font-bold text-white">100%</p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Müşteri Güveni</p>
+                        </div>
+                        <div class="border-l-2 border-zbg-gold pl-4">
+                            <p class="text-3xl font-heading font-bold text-white">7/24</p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Teknik Destek</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="bg-zbg-gold py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4xKSIvPjwvc3ZnPg==')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-black uppercase tracking-tight">
+                "ZBG İMZASINI ATTIYSA, HUZUR SENİN YANINDADIR."
+            </h2>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="iletisim" class="py-24 bg-zbg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-zbg-gold tracking-widest uppercase mb-2">Bize Ulaşın</h2>
+                <h3 class="text-4xl font-heading font-extrabold text-white uppercase">Sınırlarını Çizmeye Başla</h3>
+                <div class="w-24 h-1 bg-zbg-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="space-y-10">
+                    <div>
+                        <h4 class="text-2xl font-heading font-bold text-white uppercase mb-6">İletişim Bilgileri</h4>
+                        <p class="text-gray-400 mb-8">Ücretsiz keşif, fiyatlandırma veya teknik destek için bize aşağıdaki kanallardan ulaşabilirsiniz. Hattımızın ucunda her zaman bir gardaşınız var.</p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-zbg-panel border border-white/10 flex items-center justify-center text-zbg-gold text-xl flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Telefon / WhatsApp</p>
+                                <a href="tel:+905428310690" class="text-white font-bold text-lg hover:text-zbg-gold transition-colors">0542 831 06 90</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-zbg-panel border border-white/10 flex items-center justify-center text-zbg-gold text-xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Merkez Ofis & Atölye</p>
+                                <p class="text-white font-bold text-lg">Akyurt / Ankara, Türkiye</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-zbg-panel p-8 border border-white/10">
+                    <h4 class="text-xl font-heading font-bold text-white uppercase mb-6">Keşif Talebi Formu</h4>
+                    
+                    <!-- Notification Box -->
+                    <div id="form-notification" class="hidden mb-6 p-4 bg-green-500/20 border border-green-500 text-green-400 font-semibold text-sm">
+                        <i class="fa-solid fa-check-circle mr-2"></i> Mesajınız patrona iletildi. En kısa sürede iletişime geçeceğiz.
+                    </div>
+
+                    <form id="contact-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label class="block text-sm text-gray-400 uppercase tracking-wider mb-2">Ad Soyad / Firma Adı</label>
+                            <input type="text" required class="w-full bg-black border border-white/10 p-3 text-white focus:outline-none focus:border-zbg-gold transition-colors">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm text-gray-400 uppercase tracking-wider mb-2">Telefon</label>
+                                <input type="tel" required class="w-full bg-black border border-white/10 p-3 text-white focus:outline-none focus:border-zbg-gold transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 uppercase tracking-wider mb-2">Hizmet Türü</label>
+                                <select class="w-full bg-black border border-white/10 p-3 text-white focus:outline-none focus:border-zbg-gold transition-colors appearance-none">
+                                    <option>Kamera Sistemi</option>
+                                    <option>Aydınlatma / Elektrik</option>
+                                    <option>Komple Tesisat</option>
+                                    <option>Arıza / Bakım</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 uppercase tracking-wider mb-2">Mesajınız / İhtiyacınız</label>
+                            <textarea rows="4" required class="w-full bg-black border border-white/10 p-3 text-white focus:outline-none focus:border-zbg-gold transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-zbg-gold text-black font-heading font-bold uppercase tracking-widest hover:bg-zbg-goldHover transition-colors mt-4">
+                            Talebi Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-white/10 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <span class="font-heading font-extrabold text-2xl tracking-tighter text-white uppercase">
+                        ZBG <span class="text-zbg-gold">Girişimcilik</span>
+                    </span>
+                    <p class="text-sm text-gray-600 mt-2">© 2026 Tüm Hakları Saklıdır. Sınırları biz çizeriz.</p>
+                </div>
+                <div class="flex items-center space-x-6 text-gray-500">
+                    <a href="https://instagram.com/ZBG117" target="_blank" class="hover:text-zbg-gold transition-colors flex items-center gap-2 text-base font-semibold">
+                        <i class="fa-brands fa-instagram text-xl"></i> @ZBG117
+                    </a>
+                    <a href="#" class="hover:text-zbg-gold transition-colors"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                    <a href="https://wa.me/905428310690" target="_blank" class="hover:text-zbg-gold transition-colors"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'bg-zbg-dark');
+                navbar.classList.remove('bg-zbg-dark/90');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-zbg-dark');
+                navbar.classList.add('bg-zbg-dark/90');
+            }
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const notification = document.getElementById('form-notification');
+            
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Gönderiliyor...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            setTimeout(() => {
+                form.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                
+                notification.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    notification.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
